@@ -41,6 +41,8 @@ docker run -d --restart=always -p 11434:11434 --name magic-deepseek-demo magic-d
 
 This will start the **DeepSeek R1 model** inside a container and expose the API on port **11434**.
 
+The first start might take around 10 minutes because we need to download the DeepSeek model before Ollama can query it.
+
 ### 4️⃣ Test the API
 
 Once running, you can query the model using **cURL**:
