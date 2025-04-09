@@ -7,7 +7,7 @@ ollama serve &
 sleep 5
 
 # Pull llama3 model
-ollama pull deepseek-r1:1.5b
+ollama pull gemma3:4b
 
 # Wait for the Ollama server to finish 
 wait $!
