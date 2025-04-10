@@ -1,8 +1,8 @@
 # Magic DeepSeek Demo
 
-Deploy **DeepSeek R1** on [Magic Containers](https://bunny.net/) with a single Docker image.
+Deploy **Gemma 3 4B** on [Magic Containers](https://bunny.net/) with a single Docker image.
 
-This repository provides a **ready-to-deploy** setup for running the **DeepSeek R1 1.5B** model using [Ollama](https://ollama.ai/) inside **Magic Containers**. With this, you can run AI inference at the edge without the need for complex infrastructure.
+This repository provides a **ready-to-deploy** setup for running the **Gemma 3 4B** model using [Ollama](https://ollama.ai/) inside **Magic Containers**. With this, you can run AI inference at the edge without the need for complex infrastructure.
 
 🚀 **Read the full blog post** for a detailed guide: **[Link to the blog post](#)**
 
@@ -23,23 +23,23 @@ This repository contains:
 ### 1️⃣ Clone the Repository
 
 ```sh
-git clone https://github.com/BunnyWay/magic-deepseek-demo.git
-cd magic-deepseek-demo
+git clone https://github.com/Seym0n/magic-gemma3-demo.git
+cd magic-gemma3-demo
 ```
 
 ### 2️⃣ Build the Docker Image Locally
 
 ```sh
-docker build -t magic-deepseek-demo .
+docker build -t magic-gemma3-demo .
 ```
 
 ### 3️⃣ Run the Container
 
 ```sh
-docker run -d --restart=always -p 11434:11434 --name magic-deepseek-demo magic-deepseek-demo
+docker run -d --restart=always -p 11434:11434 --name magic-gemma3-demo magic-gemma3-demo
 ```
 
-This will start the **DeepSeek R1 model** inside a container and expose the API on port **11434**.
+This will start the **Gemma3 model** inside a container and expose the API on port **11434**.
 
 The first start might take around 10 minutes because we need to download the DeepSeek model before Ollama can query it.
 
@@ -50,7 +50,7 @@ Once running, you can query the model using **cURL**:
 ```sh
 curl -X POST http://localhost:11434/v1/completions \
      -H "Content-Type: application/json" \
-     -d '{"model": "deepseek-r1:1.5b", "prompt": "How many carrots is enough to eat daily?", "temperature": 0.8}'
+     -d '{"model": "gemma3:4b", "prompt": "How many carrots is enough to eat daily?"}'
 ```
 
 ---
@@ -66,7 +66,7 @@ curl -X POST http://localhost:11434/v1/completions \
    Go to the **[bunny.net dashboard](https://bunny.net/)**, create a **Magic Container**, and use the image:
 
    ```
-   ghcr.io/bunnyway/magic-deepseek-demo:latest
+   ghcr.io/seym0n/magic-gemma3-demo:latest
    ```
 
 3. **Start AI inference at the edge!** 🎉
