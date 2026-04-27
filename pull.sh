@@ -7,7 +7,7 @@ ollama serve &
 sleep 5
 
 # Pull gemma3 model
-ollama pull gemma3:1b
+ollama pull qwen3.5:0.8b
 
 # Wait for the Ollama server to finish 
 wait $!
